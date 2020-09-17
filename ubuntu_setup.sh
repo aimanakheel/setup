@@ -3,6 +3,8 @@
 #sudo apt update && sudo apt install git -y && git config --global user.email "drakof@awesome.com" && git config --global user.name "drakof"
 
 echo '----Begin Setup----'
+#Basic Setup
+sudo passwd
 
 sudo apt -y update && sudo apt -y upgrade && sudo apt -y autoremove
 
@@ -69,6 +71,4 @@ sudo pip3 install python-digitalocean
 sudo pip3 install seaborn
 sudo pip3 install torch
 
-#Basic Setup
-passwd
 echo 'Setup Completed Successfully'
