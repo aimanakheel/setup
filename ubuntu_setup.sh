@@ -1,5 +1,5 @@
 #! /bin/bash
-#sudo apt update && sudo apt install git -y
+#sudo apt update && sudo apt install git -y && git config --global user.email "drakof@awesome.com" && git config --global user.name "drakof"
 
 echo '----Begin Setup----'
 
