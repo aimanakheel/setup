@@ -18,11 +18,13 @@ then
     echo 'VS Code is already installed'
 else
     echo 'Installing VS Code'
-    sudo curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-    sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
-    sudo echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > vscode.list 
-    sudo mv vscode.list /etc/apt/sources.list.d/
-    sudo apt update && sudo apt install code
+    sudo apt -y update
+    sudo apt -y install software-properties-common apt-transport-https wget
+    wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+    sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+    sudo apt -y update
+    sudo apt -y install code
+
 fi
 
 #install PIP3
@@ -66,12 +68,8 @@ sudo pip3 install seaborn
 sudo pip3 install torch
 
 #Upgrading System packages
-sudo apt -y update && sudo apt -y full-upgrade
+sudo apt -y update && sudo apt -y upgrade && sudo apt -y autoremove
 passwd
-echo "alias update='sudo apt -y update && sudo apt -y full-upgrade'">>~/.bashrc
+echo "alias update='sudo apt -y update && sudo apt -y upgrade'">>~/.bashrc
 echo "alias ls='ls --color=always -rthla'">>~/.bashrc
 echo 'Setup Completed Successfully'
-
-
-
-
