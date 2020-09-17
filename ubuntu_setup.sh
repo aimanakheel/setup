@@ -71,5 +71,4 @@ sudo pip3 install torch
 
 #Basic Setup
 passwd
-echo "alias update='sudo apt -y update && sudo apt -y upgrade'">>~/.bashrc
 echo 'Setup Completed Successfully'
