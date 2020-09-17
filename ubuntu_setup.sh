@@ -1,7 +1,10 @@
 #! /bin/bash
+
 #sudo apt update && sudo apt install git -y && git config --global user.email "drakof@awesome.com" && git config --global user.name "drakof"
 
 echo '----Begin Setup----'
+
+sudo apt -y update && sudo apt -y upgrade && sudo apt -y autoremove
 
 #install python3
 if [ -r /usr/bin/python3 ]
@@ -48,7 +51,6 @@ else
     sudo pip3 install jupyter_contrib_nbextensions
     sudo jupyter contrib nbextension install
     sudo jupyter nbextension enable codefolding/main
-
 fi
 
 #install other relevant packages
@@ -67,8 +69,7 @@ sudo pip3 install python-digitalocean
 sudo pip3 install seaborn
 sudo pip3 install torch
 
-#Upgrading System packages
-sudo apt -y update && sudo apt -y upgrade && sudo apt -y autoremove
+#Basic Setup
 passwd
 echo "alias update='sudo apt -y update && sudo apt -y upgrade'">>~/.bashrc
 echo "alias ls='ls --color=always -rthla'">>~/.bashrc
