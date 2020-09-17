@@ -1,6 +1,6 @@
 #! /bin/bash
 
-#sudo apt update && sudo apt install git -y && git config --global user.email "drakof@awesome.com" && git config --global user.name "drakof"
+#sudo apt update && sudo apt install git -y && git config --global user.email "drakof@awesome.com" && git config --global user.name "drakof" && git clone https://github.com/aimanakheel/setup.git
 
 echo '----Begin Setup----'
 #Basic Setup
