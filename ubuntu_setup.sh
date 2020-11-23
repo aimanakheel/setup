@@ -4,7 +4,7 @@
 
 echo '----Begin Setup----'
 #Basic Setup
-sudo passwd
+#sudo passwd
 
 sudo apt -y update && sudo apt -y upgrade && sudo apt -y autoremove
 
